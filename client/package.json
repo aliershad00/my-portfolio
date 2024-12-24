@@ -1,6 +1,6 @@
 {
   "name": "my-react-app",
-  "proxy": "http://localhost:8080",
+  "proxy": "https://my-portfolio-t0d5.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

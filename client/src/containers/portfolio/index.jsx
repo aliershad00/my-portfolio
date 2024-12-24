@@ -14,7 +14,7 @@ const portfolioData = [
     id: 2,
     name: "My Portfolio",
     image: imaggeOne,
-    link : 'http://localhost:3000/portfolio',
+    link : 'https://my-portfolio-t0d5.onrender.com',
   },
   {
     id: 2,
