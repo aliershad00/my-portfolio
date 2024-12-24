@@ -1,0 +1,67 @@
+1. Background
+Purpose: Sets the background color of the particle animation area.
+Usage:
+color: Defines the color of the background.
+How to Modify: Change the value to any color you want. For example, value: '#ff0000' will set the background color to red.
+2. FPS Limit
+Purpose: Controls how many frames per second the animation runs at, which helps with performance.
+Usage:
+fpsLimit: Specifies the maximum number of frames per second.
+How to Modify: Adjust the number to fit your needs. Higher values mean smoother animations but may affect performance. For example, fpsLimit: 60 for standard smoothness.
+3. Interactivity
+Purpose: Configures how the particles react to user actions like clicking and hovering.
+Usage:
+events: Contains settings for interactive behaviors.
+onClick: Controls what happens when the user clicks on the particle area.
+enable: Set to true to activate the click behavior.
+mode: Defines the action taken on click, such as push to add more particles.
+onHover: Controls what happens when the user hovers over the particle area.
+enable: Set to true to activate hover behavior.
+mode: Defines the action on hover, such as repulse to push particles away.
+resize: Set to true to adjust particles when the window size changes.
+How to Modify: Change the mode values to different behaviors or toggle enable to false to disable specific interactions.
+4. Particles
+Purpose: Customizes the appearance and behavior of the particles themselves.
+Usage:
+color: Sets the color of the particles.
+links: Configures the lines connecting particles.
+color: Sets the color of these lines.
+distance: Defines how far apart particles can be linked.
+enable: Set to true to show lines between particles.
+opacity: Controls the transparency of the lines.
+width: Adjusts the thickness of the lines.
+collisions: Determines if particles can collide with each other.
+enable: Set to true to allow collisions.
+move: Controls how particles move.
+direction: Can be none (random movement) or other directions.
+enable: Set to true to make particles move.
+outModes: Determines what happens when particles hit the edge of the container. For example, bounce makes them bounce back.
+random: Set to false for consistent movement, true for random.
+speed: Controls how fast the particles move.
+straight: Set to false for random movement, true for straight paths.
+number: Adjusts the number of particles and their density.
+density: Controls the density calculation area.
+value: Total number of particles to display.
+opacity: Controls how transparent the particles are.
+shape: Defines the shape of the particles, like circle or square.
+size: Adjusts the size range of the particles.
+How to Modify:
+color: Change to any color you prefer.
+links: Modify distance, color, and width for different link styles.
+collisions: Toggle enable to allow or disallow collisions.
+move: Adjust speed, direction, and outModes to control movement styles.
+number: Change value to increase or decrease the number of particles.
+opacity: Set to any value between 0 (fully transparent) and 1 (fully opaque).
+shape: Change type to other shapes if needed.
+size: Set value to a specific size or range.
+5. Detect Retina
+Purpose: Ensures that particles look good on high-resolution (retina) screens.
+Usage:
+detectRetina: Set to true to support high-resolution displays.
+How to Modify: Generally, leave this as true to ensure your animation looks sharp on all screens.
+Summary
+background: Changes the background color.
+fpsLimit: Sets the maximum frame rate.
+interactivity: Configures how particles respond to clicks and hovers.
+particles: Customizes the particles' appearance, movement, and behavior.
+detectRetina: Ensures good display quality on high-resolution screens.

@@ -1,0 +1,215 @@
+
+// .navbar {
+//   background-color: var(--yellow-theme-nav-background-color);
+//   height: 80px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 1.2rem;
+//   position: sticky;
+
+//   &__container {
+//     display: flex;
+//     align-items: center;
+//     width: 100%;
+//     max-width: 1200px; // Optional: restrict maximum width
+//     padding: 0px 20px;
+//     position: relative; // Added to manage position of menu
+
+//     &__logo {
+//       color: var(--yellow-theme-main-color);
+//       cursor: pointer;
+//       margin-right: auto; // Ensure logo is aligned to the left
+//     }
+
+//     &__menu {
+//       display: flex;
+//       list-style: none;
+//       margin: 0;
+//       padding: 0;
+//       flex: 1; // Allows menu to take available space
+//       justify-content: center; // Center align menu items
+//       align-items: center;
+
+//       &__item {
+//         line-height: 40px;
+//         margin-right: 1.5rem;
+//         font-size: 1.6rem;
+
+//         &::after {
+//           content: '';
+//           display: block;
+//           height: 3px;
+//           width: 0;
+//           background: transparent;
+//           transition: all 0.5s ease;
+//         }
+
+//         &:hover::after {
+//           width: 100%;
+//           background: var(--yellow-theme-main-color);
+//         }
+        
+//         &__links {
+//           color: var(--yellow-theme-main-color);
+//           text-decoration: none;
+//           padding: 0.5rem;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .nav-icon {
+//   display: none;
+// }
+
+// @media only screen and (max-width: 420px) {
+//   .navbar__container__menu {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     width: 100%;
+//     position: absolute;
+//     top: 80px;
+//     left: -100%; // Adjusted for full width coverage
+//     background: #2cb810;
+//     transition: all 0.5s ease;
+
+//     &.active {
+//       left: 0;
+//     }
+
+//     &__item {
+//       border-bottom: 1px solid #282828;
+//       margin: 0;
+//       padding: 20px 0;
+//     }
+//   }
+
+//   .nav-icon {
+//     display: block;
+//     cursor: pointer;
+//     color: var(--yellow-theme-main-color);
+//     padding-right: 20px;
+//   }
+// }
+
+/*
+-------------------------------------------------------------------------------------------------
+*/
+
+
+
+.navbar {
+  background-color: var(--yellow-theme-nav-background-color);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0px 20px;
+    position: relative;
+
+    &__logo {
+      color: var(--yellow-theme-main-color);
+      cursor: pointer;
+      margin-right: auto;
+    }
+
+    &__menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease;
+      
+      /* Ensure the menu is hidden initially on mobile */
+      position: absolute; // if make problem in next then do static
+      left: 0;
+      right: 0;
+      z-index: 9; /* Ensure it’s behind the nav icon */
+
+      &__item {
+        line-height: 40px;
+        margin-right: 1.5rem;
+        font-size: 1.6rem;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 3px;
+          width: 0;
+          background: transparent;
+          transition: all 0.5s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+          background: var(--yellow-theme-main-color);
+        }
+
+        &__links {
+          color: var(--yellow-theme-main-color);
+          text-decoration: none;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .nav-icon {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 11; /* Ensure the nav-icon is clickable above other elements */
+  }
+
+  @media only screen and (max-width: 420px) {
+    .navbar__container__menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      background: #2cb810;
+      transform: translateX(-100%); /* Initially hidden */
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      z-index: 10; /* Ensure the menu is above other content */
+    }
+
+    .navbar__container__menu.active {
+      transform: translateX(0); /* Slide in */
+      opacity: 1; /* Ensure the menu becomes visible */
+    }
+
+    .navbar__container__menu__item {
+      border-bottom: 1px solid #282828;
+      margin: 0;
+      padding: 20px 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-icon {
+      display: block;
+      color: var(--yellow-theme-main-color);
+      padding-right: 20px;
+    }
+  }
+}

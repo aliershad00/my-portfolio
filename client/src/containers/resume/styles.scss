@@ -1,0 +1,85 @@
+.resume {
+    padding: 20px;
+    background-color: #e7e9ed;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    .resume__content {
+      max-width: 900px;
+      margin: 0 auto;
+  
+      .resume__intro {
+        font-size: 1.5rem;
+        color: #2c0707;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: left;
+        line-height: 1.6;
+      }
+  
+      .resume__sections {
+        .resume__section {
+          margin-bottom: 20px;
+  
+          h3 {
+            font-size: 1.8rem;
+            color: var(--yellow-theme-main-color);
+            margin-bottom: 15px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--yellow-theme-main-color);
+          }
+  
+          ul {
+            list-style: none;
+            padding: 0;
+  
+            li {
+              margin-bottom: 10px;
+              font-size: 1.2rem;
+  
+              strong {
+                font-weight: 700;
+                font-size: 1.8rem;
+              }
+  
+              span {
+                font-size: 1.8rem;
+                color: #666;
+              }
+  
+              p {
+                margin-top: 5px;
+                font-size: 1.2rem;
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+  
+      .resume__download-button {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: var(--yellow-theme-main-color);
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.3s;
+  
+        svg {
+          margin-right: 10px;
+        }
+  
+        &:hover {
+          background-color: (var(--yellow-theme-main-color), 10%);
+        }
+      }
+    }
+  }
+  
